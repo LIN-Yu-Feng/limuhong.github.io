@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#interests" data-i18n="nav.interests">Interests</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="language-selector">
+                    <select id="languageSelect" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="zh-TW">繁體中文</option>
+                    </select>
+                </li>
+                <li class="theme-toggle">
+                    <button id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero.title">Hi, I'm [Your Name]</h1>
+                <p data-i18n="hero.subtitle">High School Student | Aspiring [Your Dream]</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-i18n="about.title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.content">I'm a passionate high school student with a keen interest in [Your Interests]. I love learning new things and challenging myself to grow both academically and personally.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2 data-i18n="education.title">Education</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <h3 data-i18n="education.highschool">High School</h3>
+                    <p data-i18n="education.school">[Your School Name]</p>
+                    <p data-i18n="education.years">2020 - Present</p>
+                    <ul>
+                        <li data-i18n="education.gpa">GPA: [Your GPA]</li>
+                        <li data-i18n="education.courses">Relevant Coursework: [Your Courses]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="interests">
+            <h2 data-i18n="interests.title">My Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <i class="fas fa-book"></i>
+                    <h3 data-i18n="interests.reading.title">Reading</h3>
+                    <p data-i18n="interests.reading.content">I enjoy reading [Your Favorite Genres]</p>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-music"></i>
+                    <h3 data-i18n="interests.music.title">Music</h3>
+                    <p data-i18n="interests.music.content">I play [Your Instruments] and listen to [Your Music Preferences]</p>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-basketball-ball"></i>
+                    <h3 data-i18n="interests.sports.title">Sports</h3>
+                    <p data-i18n="interests.sports.content">I participate in [Your Sports/Activities]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 data-i18n="contact.title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <span data-i18n="contact.email">[Your Email]</span></p>
+                    <p><i class="fas fa-phone"></i> <span data-i18n="contact.phone">[Your Phone]</span></p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer.copyright">&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
