@@ -13,6 +13,20 @@ function changeLanguage(lang) {
 
     // Update the HTML lang attribute
     document.documentElement.lang = lang;
+
+    // Update the language toggle button text
+    const langText = document.querySelector('.lang-text');
+    switch(lang) {
+        case 'zh-CN':
+            langText.textContent = '繁';
+            break;
+        case 'zh-TW':
+            langText.textContent = 'ENG';
+            break;
+        case 'en':
+            langText.textContent = '简';
+            break;
+    }
 }
 
 // Function to initialize the language
@@ -27,11 +41,29 @@ function initLanguage() {
                       (browserLanguage.includes('CN') ? 'zh-CN' : 'zh-TW') : 
                       'en');
     
-    // Update the select element
-    document.getElementById('languageSelect').value = initialLang;
-    
     // Apply the language
     changeLanguage(initialLang);
+
+    // Add click handler for language toggle
+    const languageToggle = document.getElementById('languageToggle');
+    languageToggle.addEventListener('click', () => {
+        const currentLang = document.documentElement.lang;
+        let nextLang;
+        switch(currentLang) {
+            case 'zh-CN':
+                nextLang = 'zh-TW';
+                break;
+            case 'zh-TW':
+                nextLang = 'en';
+                break;
+            case 'en':
+                nextLang = 'zh-CN';
+                break;
+            default:
+                nextLang = 'en';
+        }
+        changeLanguage(nextLang);
+    });
 }
 
 // Theme switching functionality
