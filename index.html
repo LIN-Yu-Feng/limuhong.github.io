@@ -16,12 +16,10 @@
                 <li><a href="#education" data-i18n="nav.education">Education</a></li>
                 <li><a href="#interests" data-i18n="nav.interests">Interests</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-                <li class="language-selector">
-                    <select id="languageSelect" onchange="changeLanguage(this.value)">
-                        <option value="en">English</option>
-                        <option value="zh-CN">简体中文</option>
-                        <option value="zh-TW">繁體中文</option>
-                    </select>
+                <li class="language-toggle">
+                    <button id="languageToggle" aria-label="Toggle language">
+                        <span class="lang-text">简</span>
+                    </button>
                 </li>
                 <li class="theme-toggle">
                     <button id="themeToggle" aria-label="Toggle theme">
@@ -60,6 +58,24 @@
                     <ul>
                         <li data-i18n="education.gpa">GPA: [Your GPA]</li>
                         <li data-i18n="education.courses">Relevant Coursework: [Your Courses]</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <h3 data-i18n="education.middleschool">Middle School</h3>
+                    <p data-i18n="education.middleschool.name">[Your Middle School Name]</p>
+                    <p data-i18n="education.middleschool.years">2017 - 2020</p>
+                    <ul>
+                        <li data-i18n="education.middleschool.achievements">Key Achievements: [Your Achievements]</li>
+                        <li data-i18n="education.middleschool.activities">Activities: [Your Activities]</li>
+                    </ul>
+                </div>
+                <div class="education-item">
+                    <h3 data-i18n="education.primaryschool">Primary School</h3>
+                    <p data-i18n="education.primaryschool.name">[Your Primary School Name]</p>
+                    <p data-i18n="education.primaryschool.years">2011 - 2017</p>
+                    <ul>
+                        <li data-i18n="education.primaryschool.achievements">Key Achievements: [Your Achievements]</li>
+                        <li data-i18n="education.primaryschool.activities">Activities: [Your Activities]</li>
                     </ul>
                 </div>
             </div>
